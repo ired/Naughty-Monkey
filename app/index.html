@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" ng-app="monkeyApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Naughty Monkey</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+
+
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="bower_components/modernizr/modernizr.js"></script>
+    </head>
+    <body ng-controller="monkeyAppCtrl">
+
+    <header class="bar promote-layer">
+      <div class="bar-container">
+        <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
+      </div>
+    </header>
+
+    <nav class="side-nav-container promote-layer">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/">Naughty Monkey</a></li>
+        <li><a href="https://github.com/ired">github</a></li>
+      </ul>
+    </nav>
+    <main class="container">
+        <div class="robothead">
+            <div class="face" ng-style="style.face()">
+                <div class="eye">&nbsp;</div>
+                <div class="eye">&nbsp;</div>
+                <form key-press="enter()" ng-click="data.info.hide()">
+                    <input type="text" id="formValue" focus-me autocomplete="off" ng-model="data.mouth"/>
+                </form>
+            </div>
+        </div>
+
+
+        <div text-balloon class="bwrap"></div>
+        <div class="stats"></div>
+
+        <p class="info" ng-show="data.info.visibility" >I'm pure JavaScipt + Css Monkey, no pictures were used to create me. <br/><br/>
+        You can type something in to my mouth and after pressing ENTER you can copy the link to your message and send it somebody.</p>
+    </main>
+
+
+
+    <footer>
+            made by Vladislav Gapurov
+    </footer>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="scripts/base64.js"></script>
+    <script src="scripts/cursorTracking.js"></script>
+    <script src="scripts/offcanvas.js"></script>
+    <script src="scripts/app.js"></script>
+    <!--<script src="scripts/main.js"></script>-->
+
+</body>
+</html>
