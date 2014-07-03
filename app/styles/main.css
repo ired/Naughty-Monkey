@@ -164,7 +164,7 @@ body {
 main {
   margin: 0 auto;
   /* Height of the header */
-  padding: 40px 16px 16px 16px;
+  padding: 10px 16px 16px 16px;
   min-height: 100%; }
 
 /*-----  End of offcanvas  ------*/
@@ -195,8 +195,7 @@ header {
   position: relative;
   margin: 0 auto;
   min-height: 900px;
-  max-height: 900px;
-  width: 100%; }
+  max-height: 900px; }
 
 .robothead {
   position: relative;
@@ -306,16 +305,14 @@ header {
 
 .info {
   display: block;
-  position: relative;
-  left: 50%;
+  position: absolute;
+  left: 10px;
   margin-top: 100px;
-  margin-left: -25%;
   text-align: left;
-  bottom: 0;
+  bottom: 100px;
   color: #888;
-  font-size: 1.1em;
-  width: 480px;
-  height: 150px; }
+  font-size: 0.8em;
+  width: 200px; }
 
 .stats {
   display: none; }
