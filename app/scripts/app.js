@@ -18,9 +18,6 @@
                 .when('/', {
                     controller: 'monkeyAppCtrl'
                 })
-                .otherwise({
-                    redirectTo: '/'
-                });
         })
 
         .factory('Data', function() {
@@ -30,17 +27,17 @@
 
         })
         .controller('monkeyAppCtrl', function($scope, Data, $interval, $timeout, $animate, $route, $location, $routeParams) {
-            $scope.location = $location.hash();
+            $scope.location = $location.path();
             $scope.data = Data;
             $scope.style = {};
             $scope.data.mouth = '';
             $scope.data.info = {};
-            $scope.data.copylink = '/#/#' + $scope.location;
-            $scope.data.balloon = Base64.decode($scope.location) || '';
+            $scope.data.copylink = $location.absUrl();;
+            $scope.data.balloon = Base64.decode(($scope.location).slice(1)) || '';
             $scope.enter = function() {
                 $scope.data.balloon = $scope.data.mouth;
-                $location.hash(Base64.encodeURI($scope.data.balloon));
-                $scope.data.copylink = '/#' + $location.url();
+                $location.path(Base64.encodeURI($scope.data.balloon));
+                $scope.data.copylink = $location.absUrl();
                 $scope.data.mouth = '';
             };
             $scope.reset = function() {
